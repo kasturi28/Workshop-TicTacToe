@@ -24,12 +24,15 @@ public class TicTacToeProblem {
 		System.out.println("Please enter 1 for X & 2 for O....");
 
 		uc2();
+		
+		System.out.println("TicTacToe board ....");
+		
 		uc3();
 	}
 
 	static void uc1() {
 		/*
-		 * defining char array keep 0th index blank defining rest of the elements
+		 * defining board array keep 0th index blank defining rest of the elements
 		 */
 		board  = new char[10];
 		for (int i = 1; i < 10; i++) {
