@@ -3,6 +3,8 @@ package workshop_TicTacToe;
 import java.util.Scanner;
 
 public class TicTacToeProblem {
+	
+	public static char[] board;
 
 	public static void main(String[] args) {
 		/*
@@ -15,22 +17,23 @@ public class TicTacToeProblem {
 
 		/*
 		 * printing the statement to get user's choice and then calling method uc2
+		 * calling uc3
 		 */
 
 		System.out.println("Please choose your option X or O...");
 		System.out.println("Please enter 1 for X & 2 for O....");
 
 		uc2();
+		uc3();
 	}
 
 	static void uc1() {
 		/*
 		 * defining char array keep 0th index blank defining rest of the elements
 		 */
-		char[] arr = new char[10];
-		arr[0] = ' ';
+		board  = new char[10];
 		for (int i = 1; i < 10; i++) {
-			arr[i] = ' ';
+			board[i] = ' ';
 		}
 	}
 
@@ -52,7 +55,18 @@ public class TicTacToeProblem {
 			System.out.println("Computer got X...");
 
 		}
-
 	}
+	
+	public static void uc3() {
+		
+        for (int i = 1; i <= board.length - 1; i++) {
+            if (i == 3 || i == 6 || i == 9) {
+                System.out.println(board[i]);
+            } else {
+                System.out.print(board[i] + "_" + "|" +"_");
+            }
+        }
+    }
+	
 
 }
